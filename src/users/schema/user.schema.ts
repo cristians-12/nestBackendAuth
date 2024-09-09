@@ -9,6 +9,8 @@ export class User {
   email: string;
   @Prop()
   password: string;
+  @Prop({ type: [Number], default: [] })
+  favorites: number[];
 }
 
 export const UserSchema = SchemaFactory.createForClass(User);
