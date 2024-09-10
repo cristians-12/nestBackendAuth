@@ -18,4 +18,6 @@ export class CreateUserRequest {
   @IsNumber({}, { each: true })
   @ArrayUnique()
   favorites: number[];
+
+  
 }
