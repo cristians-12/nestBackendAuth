@@ -8,6 +8,7 @@ async function bootstrap() {
     origin: [
       'http://localhost:3000',
       'https://c263hlnk-3000.use.devtunnels.ms',
+      'https://movie-test-chi.vercel.app',
     ],
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
     allowedHeaders: 'Content-Type, Authorization',
