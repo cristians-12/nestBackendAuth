@@ -16,3 +16,6 @@ Todas las peticiones deben incluir el encabezado de autorización con un token J
 | `GET`  | `/users`                   | Obtiene todos los usuarios     |
 | `GET`  | `/users/:id`               | Obtiene un usuario por ID      |
 | `POST` | `/users`                   | Crea un nuevo usuario          |
+| `POST` | `/:id/users/favorites`     | Para agregar favorito a usuario|
+| `GET`  | `/users/:id/favorites`     | Obtiene todos los favoritos    |
+|        |                            | de un usuario.                 |
