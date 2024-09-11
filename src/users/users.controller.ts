@@ -42,4 +42,9 @@ export class UsersController {
     const updatedUser = await this.usersService.addFavorite(userId, movieId);
     return updatedUser;
   }
+
+  @Get(':userId/favorites')
+  async getAllFavorites(@Param('userId') userId: string): Promise<number[]> {
+    return this.usersService.getAllFavorites(userId);
+  }
 }

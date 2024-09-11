@@ -3,3 +3,16 @@
 </p>
 
 Servicio backend para autentificacion y registro de usuarios haciendo uso de MongoDB
+
+Este servicio permite crear, actualizar y obtener usuarios del sistema. Esto haciendo uso de JWT para todas las peticiones protegidas
+
+## Autenticación
+Todas las peticiones deben incluir el encabezado de autorización con un token JWT:
+
+## Lista de Endpoints
+
+| Método | Endpoint                   | Descripción                    |
+|--------|----------------------------|--------------------------------|
+| `GET`  | `/users`                   | Obtiene todos los usuarios     |
+| `GET`  | `/users/:id`               | Obtiene un usuario por ID      |
+| `POST` | `/users`                   | Crea un nuevo usuario          |

@@ -2,6 +2,7 @@ import {
   ConflictException,
   Injectable,
   NotFoundException,
+  Param,
 } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { User } from './schema/user.schema';
@@ -54,5 +55,11 @@ export class UsersService {
       return user.save();
     }
     return user;
+  }
+
+  async getAllFavorites(userId: string): Promise<number[]> {
+    const user = await this.userModel.findById(userId).select('favorites');
+    if (!user) throw new NotFoundException(' No user found');
+    return user.favorites;
   }
 }
